@@ -2,17 +2,16 @@ langchain
 langchain-community
 langchain-experimental
 fastapi
-python_dotenv
+python-dotenv
 streamlit
 uvicorn
 pydantic
 httpx
 requests
-langchain_google_community
-langchain_tavily
+langchain-google-community
+langchain-tavily
 langchain_groq
 langchain_openai
-
 langgraph
 
 -e .

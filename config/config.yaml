@@ -1,0 +1,8 @@
+llm: 
+  openai:
+    provider: "openai"
+    model-name: "o1-mini"
+  groq:
+    provider: "groq"
+    model-name: "deepseek-r1-distill-llama-70b"
+

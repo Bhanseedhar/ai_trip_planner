@@ -3,7 +3,7 @@
 #dependencies
 
 import os
-from dotenv import load_dorenv
+from dotenv import load_dotenv
 from typing import Literal,optional,Any
 from pydantic import BaseModel,Field
 from utils.config_loader import load_config # its just a yaml loader 
@@ -38,8 +38,7 @@ class ModelLoader(BaseModel):
             groq_api_key = os.getenv("GROQ_API_KEY")
             model_name=self.config["llm"]["groq"]["model_name"]
             llm = chatGroq(model=model_name, api_key=groq_api_key)
-        else: 
-            self.model_provider=="openai":
+        elif self.model_provider=="openai":
             print("loading model from Openai........... ")
             openai_api_key=os.getenv("OPENAI_API_KEY")
             model_name=self.config["llm"]["openai"]["model_name"]
